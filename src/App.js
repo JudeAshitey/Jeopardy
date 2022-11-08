@@ -52,9 +52,9 @@ console.log(`This is queme ${queme}`);
   return (
     <div className="App">
         <h1>Jeopardy App</h1>
-        <Query/>
+        {/* <Query/> */}
         {/* <button onClick = {getQuestion} >Get Question</button> */}
-       
+       {queme}
     </div>
   );
 }
