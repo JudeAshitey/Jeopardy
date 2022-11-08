@@ -5,14 +5,14 @@ import Query from './components/Questionare';
 
 
   // const [question , setQuestion] = useState(null)
-const getQuestion = ()=>{
+// const getQuestion = ()=>{
   
-      const res = fetch('http://jservice.io/api/random')
-      const data =  res.json()
-      console.log(data);
-      return data
+//       const res = fetch('http://jservice.io/api/random')
+//       const data =  res.json()
+//       console.log(data);
+//       return data
   
-}
+// }
 
 
 
@@ -30,17 +30,29 @@ function App(props) {
 // }
 
 
-  let res = fetch('http://jservice.io/api/random');
-  const data =  res.json();
+  const res = fetch('http://jservice.io/api/random');
+  const data =  res.json;
   console.log(data);
   console.log(res);
 
+
+  const queme = data.map((ele, index) => {
+    return (
+      <Query
+        // {...ele}
+        answer = {ele.answer}
+        question =  {ele.question}
+        key={index}
+      />
+    );
+  });
+console.log(`This is queme ${queme}`);
 
 // ================= Display Section =================
   return (
     <div className="App">
         <h1>Jeopardy App</h1>
-        <Query question = {data.question}/>
+        <Query/>
         {/* <button onClick = {getQuestion} >Get Question</button> */}
        
     </div>
