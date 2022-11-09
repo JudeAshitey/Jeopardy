@@ -1,4 +1,4 @@
-const Query = (props)=>{
+const Query = ({question})=>{
     //  const {question} = props;
   
   
@@ -8,9 +8,9 @@ const Query = (props)=>{
     return(
     <div>
           
-        <h1>Category {props.question}:</h1>
-        <h2>Points :</h2>
-        <h2>Answer :</h2>
+        <h1>Category:{question}</h1>
+        <h2>Points {question}:</h2>
+        <h2>Answer {question}:</h2>
 
     </div> 
     )
